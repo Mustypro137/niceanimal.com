@@ -1,0 +1,181 @@
+/*
+=============== 
+Fonts
+===============
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+  --transition: all 0.3s linear;
+  --spacing: 0.25rem;
+  --radius: 0.5rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 620px;
+}
+
+:root {
+  /* ====> Color <==== */
+  --clr-light: #ededed;
+  --clr-dark: #333;
+  --clr-accent: #eff;
+
+  --fg-primary: var(--clr-black);
+  --fg-primary: var(--clr-light);
+  --clr-primary: #8ecae6;
+  --clr-secondary: #219ebc;
+
+  --fs-small: 0.75rem;
+  --fs-default: 1rem;
+  --fs-large: 1.5rem;
+
+  --fw-bold: 600;
+  --fw-normal: 500;
+  --fw-light: 400;
+
+  /* ====> font <==== */
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Open Sans", sans-serif;
+  --ff-heading: "Roboto", sans-serif;
+  --ff-body: "Merriweather", serif;
+  --fw-heading: 700;
+  --fw-body: 300;
+  --fs-h1: 5rem;
+  --fs-h2: 3.25rem;
+  --fs-h3: 2.75rem;
+  --fs-h4: 1.75rem;
+  --fs-body: 1.125rem;
+  --line-height: 1.55;
+  --font-color: var(--clr-light);
+  /* ====> link <==== */
+  --link-fg: var(--clr-dark);
+  --link-bg: var(--clr-light);
+  --link-fg-hover: var(--clr-dark);
+  --link-bg-hover: var(--clr-accent);
+  --transition: 250ms ease-out;
+  --shadow: 2px 5px 20px rgba(0, 0, 0, 0.2);
+  --gradient: linear-gradient(60deg, red, green, blue, yellow);
+  --background-color: blue;
+}
+
+/*
+
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--ff-secondary);
+  background: var(--clr-grey-10);
+  color: var(--clr-grey-1);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+img:not(.logo) {
+  width: 100%;
+}
+img {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: var(--ff-primary);
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+  color: var(--clr-grey-5);
+}
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+
+.btn {
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--clr-black);
+  padding: 0.375rem 0.75rem;
+  display: inline-block;
+  transition: var(--transition);
+  font-size: 0.875rem;
+  border: 2px solid var(--clr-black);
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius);
+}
+
+.btn:hover {
+  color: var(--clr-white);
+  background-color: var(--clr-black);
+}
+
+/* section */
+.section {
+  padding: 5rem 0;
+}
+
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}

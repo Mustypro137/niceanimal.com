@@ -1,0 +1,356 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+
+@import "root.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Courgette", cursive;
+}
+
+/*=== Navbar ===*/
+nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 8vh;
+  width: 95%;
+  margin: auto;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  text-align: center;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.nav-right button {
+  font-weight: var(--fw-normal);
+  font-size: var(--fs-small);
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #000;
+  border-radius: var(--radius);
+  color: var(--fg-primary);
+  background-color: var(--bg-primary);
+  transform: translateZ(0);
+  display: inline-block;
+  cursor: pointer;
+}
+
+.nav-right button::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #449a47;
+  clip-path: circle(0%);
+  opacity: 1;
+  transition: 0.4s;
+}
+
+.nav-right button:hover::before {
+  clip-path: circle(100%);
+}
+
+.nav-right button:hover {
+  color: #fff;
+}
+
+.number {
+  padding: 0 1rem;
+  font-size: 0.8rem;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+.item li {
+  padding: 0 2rem;
+  color: var(--bg-primary-4);
+  cursor: pointer;
+  font-weight: var(--fw-);
+}
+
+.item li:hover {
+  transition: all 0.3s ease-in;
+  color: #000;
+}
+
+nav img {
+  width: 50px;
+}
+
+/*=== header ===*/
+
+header {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: url(img/two-dogs.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+header h1 {
+  color: #fff;
+  font-size: 3rem;
+}
+
+header h1 span {
+  color: #37ff05;
+  font-size: 4rem;
+}
+
+header button {
+  padding: 0.8rem;
+  font-size: 2rem;
+  background-color: transparent;
+  border: 3px solid #000;
+  border-radius: 5px;
+  position: relative;
+  z-index: 5;
+  transition: all 0.6s;
+}
+
+header button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translateZ(0);
+  z-index: -1;
+  /* opacity: 1; */
+  background-color: #449a47;
+  clip-path: circle(0%);
+  transition: 0.6s;
+}
+
+header button:hover::before {
+  clip-path: circle(100%);
+}
+header button:hover {
+  color: #fff;
+}
+
+/* === section === */
+
+.section-about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  width: 80%;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.section-about .col-left {
+  flex-basis: 50%;
+}
+.section-about .col-left h3 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+.section-about .col-left p {
+  width: 90%;
+  font-size: 1.2rem;
+}
+
+.section-about .about-explore {
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  background: transparent;
+  border: 3px solid #000;
+  border-radius: 5px;
+  transition: 0.3s ease-out;
+}
+
+.about-explore:hover {
+  border: 3px solid #fff;
+  background-color: #449a47;
+  color: #fff;
+}
+
+.section-about .col-right {
+  flex-basis: 50%;
+  display: flex;
+  position: relative;
+  max-width: 40%;
+}
+
+.section-about .col-right img {
+  max-width: 100%;
+  margin: auto;
+  height: auto;
+}
+
+.section-about .col-right::before {
+  position: absolute;
+  content: "";
+  outline: 5px solid yellow;
+  width: 100%;
+  height: 100%;
+  top: -1.5rem;
+  left: -1.5rem;
+  z-index: -1;
+  transition: all 0.5s ease-in-out;
+}
+.section-about .col-right:hover::before {
+  top: 0;
+  left: 0;
+}
+
+/* === section two === */
+
+.section-two {
+  background-color: rgb(221, 221, 221);
+  padding: 5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.section-two h3 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.section-two h3 span {
+  font-size: 4rem;
+  color: #37ff05;
+  font-weight: 600;
+}
+
+.section-two .btn {
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px solid #000;
+  margin: 2rem 0.5rem;
+  transition: 0.3s ease-in-out;
+}
+
+.section-two .btn:hover {
+  color: #449a47;
+  background-color: #000;
+}
+
+form {
+  max-width: 100%;
+}
+
+.section-two .group-input {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.section-two input {
+  padding: 1rem;
+  width: 70vh;
+  font-size: 1.2rem;
+}
+
+.section-two .container-icon {
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  background-color: #449a47;
+}
+
+.container-card {
+  padding: 1rem;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.container-img {
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  border-radius: 0.25rem;
+}
+
+.container-img > img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  transition: all 1s ease-in-out;
+}
+
+.container-img img:hover {
+  transform: scale(1.2);
+}
+
+.card {
+  margin: 1rem;
+  padding: 0.5rem;
+  border-radius: 3px;
+  background-color: #effffa;
+}
+
+.card-text,
+.price {
+  font-size: 1.3rem;
+  text-align: center;
+  padding: 0.4rem 0;
+  height: 6vh;
+  z-index: 5;
+}
+
+.text-group {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.shop {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+}
+
+@media screen and (max-width: 700px) {
+  .section-two .btn {
+    font-size: 1.2rem;
+    padding: 0.5rem 0.5rem;
+    margin: 2rem 1rem;
+  }
+
+  .container-card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .container-img > img {
+    width: 300px;
+    height: 200px;
+  }
+}
